@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:get/get.dart';
+import 'package:kapkap/Screens/create_order_page.dart';
 
 class HomePage extends StatefulWidget {
   _HomePageState createState() => _HomePageState();
@@ -221,6 +222,9 @@ class _HomePageState extends State<HomePage> {
                             color: Colors.grey[100],
                           ),
                           child: ListTile(
+                            onTap: () {
+                              Get.to(() => CreateOrderPage());
+                            },
                             dense: true,
                             leading: CircleAvatar(
                               backgroundColor: Colors.grey.shade800,

@@ -4,8 +4,10 @@ import 'package:get_storage/get_storage.dart';
 import 'package:kapkap/Screens/add_food_page.dart';
 import 'package:kapkap/Screens/datas_page.dart';
 import 'package:kapkap/Screens/home_page.dart';
+import 'package:kapkap/Screens/musteri_orders_page.dart';
 import 'package:kapkap/Screens/profile_page.dart';
 
+import '../constants.dart';
 import 'basket_page.dart';
 import 'menu_page.dart';
 import 'orders_page.dart';
@@ -18,7 +20,6 @@ class NavbarRouter extends StatefulWidget {
 }
 
 class _NavbarRouterState extends State<NavbarRouter> {
-  int selectedIndex = 0;
   var type = GetStorage().read('type');
   final List<Widget> yemekciPages = [
     MenuPage(),
@@ -30,6 +31,7 @@ class _NavbarRouterState extends State<NavbarRouter> {
   final List<Widget> musteriPages = [
     HomePage(),
     BasketPage(),
+    MusteriOrdersPage(),
     ProfilePage(),
   ];
 
@@ -97,6 +99,13 @@ class _NavbarRouterState extends State<NavbarRouter> {
                         size: MediaQuery.of(context).size.height * .052,
                       ),
                       label: "Sepet",
+                    ),
+                    BottomNavigationBarItem(
+                      icon: Icon(
+                        Icons.add_shopping_cart,
+                        size: MediaQuery.of(context).size.height * .052,
+                      ),
+                      label: "Siparişlerim",
                     ),
                     BottomNavigationBarItem(
                       icon: Icon(

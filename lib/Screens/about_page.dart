@@ -29,7 +29,7 @@ class _AboutPageState extends State<AboutPage> {
                   fit: BoxFit.fitHeight,
                 ),
                 SizedBox(
-                  width: MediaQuery.of(context).size.width * .02,
+                  width: MediaQuery.of(context).size.width * .01,
                 ),
                 Container(
                     padding: EdgeInsets.only(
@@ -37,7 +37,7 @@ class _AboutPageState extends State<AboutPage> {
                     child: Column(
                       children: [
                         Text(
-                            "KapKapp hakkında merak ettiklerini,\nburadan öğrenebilirsin.",
+                            "KapKapp hakkında merak ettiklerini\nburadan öğrenebilirsin.",
                             style: TextStyle(color: Colors.white)),
                       ],
                     )),

@@ -230,6 +230,7 @@ class _ProfilePageState extends State<ProfilePage> {
                               fontSize: 14),
                         ),
                         onPressed: () async {
+                          selectedIndex = 0;
                           await GetStorage().write('isLoggedIn', 'false');
                           await GetStorage().remove('type');
                           Get.to(LoginPage());

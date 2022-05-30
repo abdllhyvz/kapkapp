@@ -89,7 +89,7 @@ class _LoginPageState extends State<LoginPage> {
       children: <Widget>[
         emailEntry(),
         SizedBox(
-          height: MediaQuery.of(context).size.height * .03,
+          height: MediaQuery.of(context).size.height * .02,
         ),
         Stack(
           children: <Widget>[
