@@ -4,6 +4,7 @@ import 'package:flutter/services.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:get/get.dart';
 import 'package:kapkap/Screens/contract.dart';
+import 'package:kapkap/Screens/signup_succesfull_page.dart';
 import 'package:kapkap/constants.dart';
 
 class SignupPage extends StatefulWidget {
@@ -267,6 +268,7 @@ class _SignupPageState extends State<SignupPage> {
               height: MediaQuery.of(context).size.height * .02,
             ),
           CheckboxListTile(
+            activeColor: mainColor,
             value: check,
             onChanged: (value) {
               setState(() {
@@ -314,7 +316,9 @@ class _SignupPageState extends State<SignupPage> {
                     fontWeight: FontWeight.bold,
                     fontSize: 14),
               ),
-              onPressed: () {},
+              onPressed: () {
+                Get.to(SignupSuccesfullPage());
+              },
             ),
           ),
           SizedBox(

@@ -152,12 +152,15 @@ class _OrdersPageState extends State<OrdersPage> {
                             ],
                           ),
                         ),
+                        SizedBox(
+                          height: MediaQuery.of(context).size.height * .02,
+                        ),
                         Container(
                           //height: MediaQuery.of(context).size.height * .2,
                           child: ExpansionTile(
                             leading: Text("Sena Ateş"),
                             title: Text("Onaylandı"),
-                            subtitle: Text("Kalan Süre: 45 dakika"),
+                            subtitle: Text("Kalan Süre: 17 dakika"),
                             backgroundColor: mainColor,
                             textColor: Colors.white,
                             iconColor: Colors.white,
@@ -248,6 +251,104 @@ class _OrdersPageState extends State<OrdersPage> {
                                           fontWeight: FontWeight.bold)),
                                 ],
                               ),
+                              Text("85₺",
+                                  style: TextStyle(
+                                      color: Colors.white,
+                                      fontWeight: FontWeight.bold)),
+                              SizedBox(
+                                height:
+                                    MediaQuery.of(context).size.height * .01,
+                              ),
+                              Container(
+                                height:
+                                    MediaQuery.of(context).size.height * .06,
+                                width: MediaQuery.of(context).size.width * .35,
+                                child: ElevatedButton(
+                                  style: ButtonStyle(
+                                      shape: MaterialStateProperty.all<
+                                              OutlinedBorder>(
+                                          RoundedRectangleBorder(
+                                              borderRadius:
+                                                  BorderRadius.circular(20))),
+                                      backgroundColor:
+                                          MaterialStateProperty.all<Color>(
+                                              Colors.white)),
+                                  child: Text(
+                                    "HAZIRLANIYOR",
+                                    style: TextStyle(
+                                        color: mainColor,
+                                        fontWeight: FontWeight.bold,
+                                        fontSize: 11),
+                                  ),
+                                  onPressed: null,
+                                ),
+                              ),
+                              SizedBox(
+                                height:
+                                    MediaQuery.of(context).size.height * .01,
+                              ),
+                            ],
+                          ),
+                        ),
+                        SizedBox(
+                          height: MediaQuery.of(context).size.height * .02,
+                        ),
+                        Container(
+                          //height: MediaQuery.of(context).size.height * .2,
+                          child: ExpansionTile(
+                            leading: Text("Eda Oğuz"),
+                            title: Text("Hazırlanıyor"),
+                            subtitle: Text("Kalan Süre: 22 dakika"),
+                            backgroundColor: mainColor,
+                            textColor: Colors.white,
+                            iconColor: Colors.white,
+                            children: [
+                              Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceAround,
+                                children: [
+                                  Text(
+                                    "Kadınbudu Köfte x 1",
+                                    style: TextStyle(
+                                        color: Colors.white,
+                                        fontWeight: FontWeight.bold),
+                                  ),
+                                  Text("25₺",
+                                      style: TextStyle(
+                                          color: Colors.white,
+                                          fontWeight: FontWeight.bold))
+                                ],
+                              ),
+                              SizedBox(
+                                height:
+                                    MediaQuery.of(context).size.height * .01,
+                              ),
+                              Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceAround,
+                                children: [
+                                  Text(
+                                    "Sütlaç x 1",
+                                    style: TextStyle(
+                                        color: Colors.white,
+                                        fontWeight: FontWeight.bold),
+                                  ),
+                                  Text("10₺",
+                                      style: TextStyle(
+                                          color: Colors.white,
+                                          fontWeight: FontWeight.bold))
+                                ],
+                              ),
+                              Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text(
+                                      "+\n¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯",
+                                      style: TextStyle(
+                                          color: Colors.white,
+                                          fontWeight: FontWeight.bold)),
+                                ],
+                              ),
                               Text("35₺",
                                   style: TextStyle(
                                       color: Colors.white,
@@ -259,7 +360,145 @@ class _OrdersPageState extends State<OrdersPage> {
                               Container(
                                 height:
                                     MediaQuery.of(context).size.height * .06,
-                                width: MediaQuery.of(context).size.width * .3,
+                                width: MediaQuery.of(context).size.width * .35,
+                                child: ElevatedButton(
+                                  style: ButtonStyle(
+                                      shape: MaterialStateProperty.all<
+                                              OutlinedBorder>(
+                                          RoundedRectangleBorder(
+                                              borderRadius:
+                                                  BorderRadius.circular(20))),
+                                      backgroundColor:
+                                          MaterialStateProperty.all<Color>(
+                                              Colors.white)),
+                                  child: Text(
+                                    "TESLİME HAZIR",
+                                    style: TextStyle(
+                                        color: mainColor,
+                                        fontWeight: FontWeight.bold,
+                                        fontSize: 11),
+                                  ),
+                                  onPressed: null,
+                                ),
+                              ),
+                              SizedBox(
+                                height:
+                                    MediaQuery.of(context).size.height * .01,
+                              ),
+                            ],
+                          ),
+                        ),
+                        SizedBox(
+                          height: MediaQuery.of(context).size.height * .02,
+                        ),
+                        Container(
+                          //height: MediaQuery.of(context).size.height * .2,
+                          child: ExpansionTile(
+                            leading: Text("Hümeyra Mintaş"),
+                            title: Text("Teslime Hazır"),
+                            subtitle: Text("Kalan Süre: 3 dakika"),
+                            backgroundColor: mainColor,
+                            textColor: Colors.white,
+                            iconColor: Colors.white,
+                            children: [
+                              Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceAround,
+                                children: [
+                                  Text(
+                                    "İzmir Köfte x 1",
+                                    style: TextStyle(
+                                        color: Colors.white,
+                                        fontWeight: FontWeight.bold),
+                                  ),
+                                  Text("30₺",
+                                      style: TextStyle(
+                                          color: Colors.white,
+                                          fontWeight: FontWeight.bold))
+                                ],
+                              ),
+                              SizedBox(
+                                height:
+                                    MediaQuery.of(context).size.height * .01,
+                              ),
+                              Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceAround,
+                                children: [
+                                  Text(
+                                    "Kısır x 2",
+                                    style: TextStyle(
+                                        color: Colors.white,
+                                        fontWeight: FontWeight.bold),
+                                  ),
+                                  Text("30₺",
+                                      style: TextStyle(
+                                          color: Colors.white,
+                                          fontWeight: FontWeight.bold))
+                                ],
+                              ),
+                              SizedBox(
+                                height:
+                                    MediaQuery.of(context).size.height * .01,
+                              ),
+                              Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceAround,
+                                children: [
+                                  Text(
+                                    "Sütlaç x 1",
+                                    style: TextStyle(
+                                        color: Colors.white,
+                                        fontWeight: FontWeight.bold),
+                                  ),
+                                  Text("10₺",
+                                      style: TextStyle(
+                                          color: Colors.white,
+                                          fontWeight: FontWeight.bold))
+                                ],
+                              ),
+                              SizedBox(
+                                height:
+                                    MediaQuery.of(context).size.height * .01,
+                              ),
+                              Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceAround,
+                                children: [
+                                  Text(
+                                    "Şekerpare x 1",
+                                    style: TextStyle(
+                                        color: Colors.white,
+                                        fontWeight: FontWeight.bold),
+                                  ),
+                                  Text("15₺",
+                                      style: TextStyle(
+                                          color: Colors.white,
+                                          fontWeight: FontWeight.bold))
+                                ],
+                              ),
+                              Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text(
+                                      "+\n¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯",
+                                      style: TextStyle(
+                                          color: Colors.white,
+                                          fontWeight: FontWeight.bold)),
+                                ],
+                              ),
+                              Text("85₺",
+                                  style: TextStyle(
+                                      color: Colors.white,
+                                      fontWeight: FontWeight.bold)),
+                              SizedBox(
+                                height:
+                                    MediaQuery.of(context).size.height * .01,
+                              ),
+                              Container(
+                                height:
+                                    MediaQuery.of(context).size.height * .06,
+                                width: MediaQuery.of(context).size.width * .35,
                                 child: ElevatedButton(
                                   style: ButtonStyle(
                                       shape: MaterialStateProperty.all<
@@ -286,7 +525,7 @@ class _OrdersPageState extends State<OrdersPage> {
                               ),
                             ],
                           ),
-                        )
+                        ),
                       ],
                     ),
                   ))

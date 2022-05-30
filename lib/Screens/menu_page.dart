@@ -102,6 +102,13 @@ class _MenuPageState extends State<MenuPage> {
                             SizedBox(
                               height: MediaQuery.of(context).size.height * .015,
                             ),
+                            Text("Kalan Stok: 6",
+                                style: TextStyle(
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.bold)),
+                            SizedBox(
+                              height: MediaQuery.of(context).size.height * .015,
+                            ),
                             Container(
                               height: MediaQuery.of(context).size.height * .06,
                               width: MediaQuery.of(context).size.width * .25,

@@ -272,7 +272,41 @@ class _AddFoodPageState extends State<AddFoodPage> {
                     ],
                   )),
               SizedBox(
-                height: MediaQuery.of(context).size.height * .08,
+                height: MediaQuery.of(context).size.height * .03,
+              ),
+              Container(
+                  height: MediaQuery.of(context).size.height * .08,
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: [
+                      Text(
+                        "Stok: ",
+                        style: TextStyle(
+                            fontSize: 17,
+                            color: mainColor,
+                            fontWeight: FontWeight.bold),
+                      ),
+                      Container(
+                          //height: MediaQuery.of(context).size.height * .1,
+                          width: MediaQuery.of(context).size.width * .3,
+                          decoration: BoxDecoration(
+                              border: Border.all(color: mainColor),
+                              borderRadius: BorderRadius.circular(70)),
+                          child: TextFormField(
+                            style: TextStyle(
+                              color: mainColor,
+                            ),
+                            cursorColor: mainColor,
+                            keyboardType: TextInputType.number,
+                            textAlign: TextAlign.center,
+                            decoration: InputDecoration(
+                                border: InputBorder.none,
+                                hoverColor: mainColor),
+                          )),
+                    ],
+                  )),
+              SizedBox(
+                height: MediaQuery.of(context).size.height * .05,
               ),
               Container(
                 height: MediaQuery.of(context).size.height * .06,
@@ -291,7 +325,7 @@ class _AddFoodPageState extends State<AddFoodPage> {
                 ),
               ),
               SizedBox(
-                height: MediaQuery.of(context).size.height * .14,
+                height: MediaQuery.of(context).size.height * .06,
               ),
               Container(
                 height: MediaQuery.of(context).size.height * .1,
