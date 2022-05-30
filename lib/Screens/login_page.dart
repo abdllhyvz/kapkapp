@@ -1,15 +1,19 @@
 import 'package:flutter/material.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 import 'package:get/get.dart';
+import 'package:get_storage/get_storage.dart';
 import 'package:kapkap/Screens/navbar.dart';
 
-class HomePage extends StatefulWidget {
-  _HomePageState createState() => _HomePageState();
+class LoginPage extends StatefulWidget {
+  _LoginPageState createState() => _LoginPageState();
 }
 
-class _HomePageState extends State<HomePage> {
+class _LoginPageState extends State<LoginPage> {
   String username = "", password = "";
   bool hidePassword = true;
   bool isHidden = true;
+  TextEditingController passwordController = TextEditingController();
+  TextEditingController emailController = TextEditingController();
 
   Widget emailEntry() {
     return Container(
@@ -24,6 +28,7 @@ class _HomePageState extends State<HomePage> {
               username = text;
               username = username.trim();
             },
+            controller: emailController,
             keyboardType: TextInputType.emailAddress,
             decoration: InputDecoration(
               enabledBorder: OutlineInputBorder(
@@ -48,6 +53,7 @@ class _HomePageState extends State<HomePage> {
               onChanged: (String text) {
                 password = text;
               },
+              controller: passwordController,
               obscureText: isHidden,
               decoration: InputDecoration(
                 suffixIcon: InkWell(
@@ -103,7 +109,36 @@ class _HomePageState extends State<HomePage> {
                   shadowColor: Colors.grey),
               clipBehavior: Clip.antiAlias,
               onPressed: () {
-                Get.to(const NavbarRouter());
+                if (emailController.text.isEmpty ||
+                    passwordController.text.isEmpty) {
+                  Fluttertoast.showToast(
+                      msg: "Lütfen tüm alanları doldurun.",
+                      toastLength: Toast.LENGTH_LONG,
+                      gravity: ToastGravity.CENTER,
+                      timeInSecForIosWeb: 1,
+                      backgroundColor: Colors.red[200],
+                      textColor: Colors.white,
+                      fontSize: 16.0);
+                } else if (emailController.text == "yemekci" &&
+                    passwordController.text == "yemekci") {
+                  GetStorage().write('type', 'yemekci');
+                  GetStorage().write('isLoggedIn', 'true');
+                  Get.to(const NavbarRouter());
+                } else if (emailController.text == "musteri" &&
+                    passwordController.text == "musteri") {
+                  GetStorage().write('type', 'musteri');
+                  GetStorage().write('isLoggedIn', 'true');
+                  Get.to(const NavbarRouter());
+                } else {
+                  Fluttertoast.showToast(
+                      msg: "Hatalı kullanıcı adı veya şifre girdiniz..",
+                      toastLength: Toast.LENGTH_LONG,
+                      gravity: ToastGravity.CENTER,
+                      timeInSecForIosWeb: 1,
+                      backgroundColor: Colors.red[200],
+                      textColor: Colors.white,
+                      fontSize: 16.0);
+                }
               },
               child: Ink(
                 decoration: BoxDecoration(
